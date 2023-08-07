@@ -10,10 +10,14 @@ https
       key: fs.readFileSync("key.pem"),
       cert: fs.readFileSync("cert.pem"),
     },
-	app)
-  .listen(4000, ()=>{
-    console.log('server is runing at port 4000')
+    app)
+  .listen(4001, () => {
+    console.log('https server is runing at port 4001')
   });
+
+app.listen(4000, () => {
+  console.log('http server is runing at port 4000')
+});
 
 app.get('/*', (req, res) => {
   res.json({message: 'Hello World, from express'});
