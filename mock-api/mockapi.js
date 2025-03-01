@@ -37,5 +37,3 @@ app.delete('/*', (req, res) => {
 app.patch('/*', (req, res) => {
   res.json({message: 'Hello World, from express'});
 });
-
-// Comentário teste
